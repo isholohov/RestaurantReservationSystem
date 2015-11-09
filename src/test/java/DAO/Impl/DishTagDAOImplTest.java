@@ -72,13 +72,12 @@ public class DishTagDAOImplTest {
 
         assertTrue(dishTagsFromDB.contains(dishTag));
 
-        dishTagDAO.deleteDishTag(dishTag);
-        Thread.sleep(20000);
-        assertFalse(dishTagDAO.getAllDishTags().contains(dishTag));
+
 
         for (DishTag d : dishTags) {
             assertTrue(dishTagsFromDB.contains(d));
         }
+
 
         int restaurantId = 3;
 
@@ -88,12 +87,13 @@ public class DishTagDAOImplTest {
                 assertTrue(dishTagsFromDB.contains(d));
             }
         }
-    }
 
-    @After
-    public void after() throws Exception {
-        for (DishTag dishTag : dishTags) {
-            dishTagDAO.deleteDishTag(dishTag);
+        for (DishTag d : dishTags) {
+            dishTagDAO.deleteDishTag(d);
         }
+
+        dishTagDAO.deleteDishTag(dishTag);
+        assertFalse(dishTagDAO.getAllDishTags().contains(dishTag));
+
     }
 }

@@ -3,6 +3,9 @@ package DAO.Impl;
 import DAO.Factory;
 import DAO.RegisteredUserDAO;
 import core.RegisteredUser;
+import core.Restaurant;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -15,12 +18,17 @@ import static org.junit.Assert.assertTrue;
 
 public class RegisteredUserDAOImplTest {
 
-    RegisteredUserDAO registeredUserDAO = Factory.getRegisteredUserDAO();
+    private RegisteredUserDAO registeredUserDAO;
+    private ArrayList<RegisteredUser> registeredUsers = new ArrayList<RegisteredUser>();
+
+    @Before
+    public void before() throws Exception {
+        registeredUserDAO = Factory.getRegisteredUserDAO();
+    }
 
     @Test
     public void testRegisteredUserDAO() throws Exception {
 
-        ArrayList<RegisteredUser> registeredUsers = new ArrayList<RegisteredUser>();
         RegisteredUser registeredUser;
         String phoneNumber = "899955412";
         for (int i = 1; i <= 10; i++) {
@@ -34,16 +42,21 @@ public class RegisteredUserDAOImplTest {
             }
         }
 
-        List registeredUsersFromDB = registeredUserDAO.getAllRegisteredUser();
+        List<RegisteredUser> registeredUsersFromDB = (ArrayList<RegisteredUser>) registeredUserDAO.getAllRegisteredUser();
 
         for (RegisteredUser user : registeredUsers) {
             assertTrue(registeredUsersFromDB.contains(user));
         }
 
-        RegisteredUser userFromDB = (RegisteredUser) registeredUsersFromDB.get(5);
-        RegisteredUser user = registeredUserDAO.getRegisteredUserById(userFromDB.getIdRegisteredUser());
-        registeredUserDAO.deleteRegisteredUser(user);
+        RegisteredUser user = registeredUserDAO.getRegisteredUserById(registeredUsersFromDB.get(5).getIdRegisteredUser());
+        registeredUsers.remove(user);
 
+        for (RegisteredUser r : registeredUsers) {
+            registeredUserDAO.deleteRegisteredUser(r);
+        }
+
+        registeredUserDAO.deleteRegisteredUser(user);
         assertFalse(registeredUserDAO.getAllRegisteredUser().contains(user));
     }
+
 }

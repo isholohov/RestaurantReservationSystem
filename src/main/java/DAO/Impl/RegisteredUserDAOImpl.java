@@ -47,18 +47,16 @@ public class RegisteredUserDAOImpl implements RegisteredUserDAO {
 
 
     public RegisteredUser getRegisteredUserById(@NotNull Integer id) throws SQLException {
-        Session session = null;
         RegisteredUser registeredUser = null;
-        try {
-            session = HibernateUtil.getSessionFactory().openSession();
-            registeredUser = (RegisteredUser) session.load(RegisteredUser.class, id);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (session != null && session.isOpen()) {
-                session.close();
+        List registeredUsers = getAllRegisteredUser();
+
+        for (int i = 0; i < registeredUsers.size(); i++) {
+            RegisteredUser registeredUserFromList = (RegisteredUser) registeredUsers.get(i);
+            if (registeredUserFromList.getIdRegisteredUser() == id) {
+                registeredUser = registeredUserFromList;
             }
         }
+
         return registeredUser;
     }
 

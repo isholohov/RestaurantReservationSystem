@@ -50,15 +50,15 @@ public class RestaurantDAOImplTest {
         }
 
         Restaurant rest = restaurantDAO.getRestaurantById(restaurantsFromDB.get(5).getIdRestaurant());
+        restaurants.remove(rest);
+
+        for (Restaurant r : restaurants) {
+            restaurantDAO.deleteRestaurant(r);
+        }
+
+
         restaurantDAO.deleteRestaurant(rest);
-//        Thread.sleep(30000);
         assertFalse(restaurantDAO.getAllRestaurants().contains(rest));
     }
 
-    @After
-    public void after() throws Exception {
-        for (Restaurant restaurant : restaurants) {
-            restaurantDAO.deleteRestaurant(restaurant);
-        }
-    }
 }
