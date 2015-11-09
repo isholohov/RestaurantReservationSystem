@@ -1,0 +1,70 @@
+
+.content-wrapper {
+
+}
+
+.filter-wrapper {
+    height: 100%;
+    width: 12%;
+    float: left;
+}
+
+.filter {
+    border: 1px solid #DBDBDB;
+    width: 100%;
+    height: 300px;
+}
+
+#dish {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#dish-list {
+    margin-top: 15px;
+}
+
+#dish-list input {
+    margin-left: 15px;
+}
+
+#dish-filter-buttons {
+    margin: 15px auto 0 auto;
+    width: 80%;
+}
+
+#dish-filter-buttons input {
+    /*display: inline-block;*/
+    width: 100%;
+}
+
+.site-description {
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    /*border: 1px solid black ;*/
+    float: left;
+    clear: both;
+}
+
+#restaurants-bars-wrapper {
+    /*border: 1px solid black;*/
+    width: 85%;
+    float: right;
+    margin-left: 15px;
+    padding-top: 0px;
+
+}
+
+.restaurant-bar {
+    border: 1px solid black;
+    height: 150px;
+    width: 200px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    display: inline;
+    content: ".";
+    float: left;
+    padding-left: 10px;
+
+}

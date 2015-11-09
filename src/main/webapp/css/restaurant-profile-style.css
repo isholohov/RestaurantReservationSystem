@@ -1,0 +1,134 @@
+
+.content-wrapper {
+    /*border-left: 1px solid #DBDBDB;*/
+    /*border-right: 1px solid #DBDBDB;*/
+    height: 100%;
+}
+
+.restaurant-information-bar {
+    width: 80%;
+    padding: 0 0 5px 10px;
+}
+
+.info-block {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 5px;
+}
+
+.label {
+    height: 18px;
+    width: 20%;
+
+}
+
+.labeled {
+    height: 100%;
+    width: 75%
+
+}
+
+h5 {
+    font-size: 15px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    font-weight: normal;
+    margin: 0;
+}
+
+h4 {
+    font-size: 15px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    color: #6d6d6d;
+    font-weight: normal;
+    margin: 0;
+}
+
+.upper-block {
+    width: 100%;
+    border: 1px solid #BDBDBD;
+    padding-top: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    border-radius: 5px;
+}
+
+.upper-block-wrapper {
+    width: 80%;
+    margin: 30px auto 0px;
+}
+
+.reservation-bar {
+    margin: auto 0px;
+    padding: 0 10px 0 10px;
+    border-left: 1px solid rgb(189, 189, 189);
+    height: 100%;
+    width: 25%;
+    height: 130px;
+    /*     display: inline-block; */
+}
+
+.reservation-field {
+    float: left;
+    width: 120px;
+}
+
+.reservation-value {
+    /*     width: 100px */
+    float: right;
+    display: inline-flex;
+}
+
+.reservation-submit {
+    margin-top: 10px;
+}
+
+.reservation-info {
+    margin-top: 8px;
+    height: 22px;
+    width: 90%;
+    display: inline-flex;
+
+}
+
+.reservation-value input, .reservation-value button {
+    height: 100%;
+}
+
+.reservation-value button {
+    width: 35px;
+}
+
+.reviews-bars-wrapper {
+    width: 60%;
+    margin: 30px auto 0px;
+}
+
+#review-bar-title, #review-bar-empty {
+    margin: 15px auto 15px auto;
+    text-align: center;
+}
+
+.review-bar {
+    border: 1px solid rgb(189, 189, 189);
+    padding: 15px 20px 15px;
+    margin-bottom: 15px;
+}
+
+#rating-field {
+    display: inline-flex;
+    width: 500px;
+}
+
+#comment {
+    margin-top: 15px;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+#review-button {
+    margin-top: 15px;
+}
+
+.review-bar-wrapper {
+    margin-top: 40px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>servlets.IndexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RestaurantProfileServlet</servlet-name>
+        <servlet-class>servlets.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FilterServlet</servlet-name>
+        <servlet-class>servlets.FilterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>servlets.DispatcherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistrationDispatcherServlet</servlet-name>
+        <servlet-class>servlets.RegistrationDispatcherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HeaderServlet</servlet-name>
+        <servlet-class>servlets.HeaderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RegistrationUserServlet</servlet-name>
+        <servlet-class>servlets.RegistrationUserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistrationRestaurantServlet</servlet-name>
+        <servlet-class>servlets.RegistrationRestaurantServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthenticationServlet</servlet-name>
+        <servlet-class>servlets.AuthenticationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReservationServlet</servlet-name>
+        <servlet-class>servlets.ReservationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReviewServlet</servlet-name>
+        <servlet-class>servlets.ReviewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReservationManagerServlet</servlet-name>
+        <servlet-class>servlets.ReservationManagerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AcceptReservationServlet</servlet-name>
+        <servlet-class>servlets.AcceptReservationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>/dispatcher</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RestaurantProfileServlet</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FilterServlet</servlet-name>
+        <url-pattern>/filter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrationDispatcherServlet</servlet-name>
+        <url-pattern>/registrationdispatcher</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HeaderServlet</servlet-name>
+        <url-pattern>/header</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrationUserServlet</servlet-name>
+        <url-pattern>/registrationuser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrationRestaurantServlet</servlet-name>
+        <url-pattern>/registrationrestaurant</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthenticationServlet</servlet-name>
+        <url-pattern>/authentication</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReservationServlet</servlet-name>
+        <url-pattern>/reservation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReviewServlet</servlet-name>
+        <url-pattern>/review</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReservationManagerServlet</servlet-name>
+        <url-pattern>/reservationmanager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AcceptReservationServlet</servlet-name>
+        <url-pattern>/accept</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

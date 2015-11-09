@@ -1,0 +1,15 @@
+.info-block {
+    margin: 0 auto 10px auto;
+    width: 90%;
+    /*     border: 1px solid; */
+    display: inline-block;
+}
+
+.label {
+    height: 30px;
+    float: left;
+}
+
+.labeled {
+    float: right;
+}

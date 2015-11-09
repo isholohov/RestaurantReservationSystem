@@ -1,0 +1,27 @@
+.content-wrapper {
+    width: 80%;
+}
+
+.registration-form-wrapper {
+    width: 400px;
+    border: 1px solid #bdbdbd;
+    margin: 30px auto;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.info-block {
+    margin: 0 auto 10px auto;
+    width: 90%;
+    /*     border: 1px solid; */
+    display: inline-block;
+}
+
+.label {
+    height: 30px;
+    float: left;
+}
+
+.labeled {
+    float: right;
+}
